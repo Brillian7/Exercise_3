@@ -20,6 +20,22 @@ namespace Exercise_Linked_List_D
         {
             LAST = null;
         }
+        public bool search(int rollNo, ref Node previous, ref Node current)
+        /*Searches for the specified node*/
+        {
+            for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
+            {
+                if (rollNo == current.rollNumber)
+                    return (true);
+                /*returns true if the node is found*/
+            }
+            if (rollNo == LAST.rollNumber)
+                /*if the node is present at the end*/
+                return true;
+            else
+                return(false);
+            /*returns false if the node is not found*/
+        }
     }
     internal class Program
     {
