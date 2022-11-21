@@ -43,6 +43,12 @@ namespace Exercise_Linked_List_D
             else
                 return false ;
         }
+        public void traverse()
+        /*Traverses all the nodes of the list*/
+        {
+            
+
+        }
     }
     internal class Program
     {
