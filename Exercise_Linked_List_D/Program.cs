@@ -59,14 +59,28 @@ namespace Exercise_Linked_List_D
                         currentNode.name+"\n");
                     currentNode = currentNode.next;
                 }
+                Console.Write(LAST.rollNumber+""+LAST.name+"\n");
             }
-
         }
+        public void firstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nlist ist empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n" +
+                    LAST.next.rollNumber + "" + LAST.next.name);
+        }
+        
     }
     internal class Program
     {
         static void Main(string[] args)
         {
+            CircularList obj = new CircularList();
+            while (true)
+            {
+
+            }
         }
     }
 }
