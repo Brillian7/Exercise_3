@@ -48,6 +48,12 @@ namespace Exercise_Linked_List_D
         {
             if (listEmpty())
                 Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are:\n");
+                Node currentNode;
+                currentNode = LAST.next;
+            }
 
         }
     }
