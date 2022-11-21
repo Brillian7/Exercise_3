@@ -79,7 +79,61 @@ namespace Exercise_Linked_List_D
             CircularList obj = new CircularList();
             while (true)
             {
-
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. view all the records in the list");
+                    Console.WriteLine("2. search for a  record in the list");
+                    Console.WriteLine("3. display the first record in the list");
+                    Console.WriteLine("4. exit");
+                    Console.Write("\nEnter your choice (1-4):");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if (obj.listEmpty()==true)
+                                {
+                                    Console.WriteLine("\nlist is empty");
+                                    break;
+                                }
+                                Node prev, curr;
+                                prev = curr = null;
+                                Console.Write("\nEnter the roll number of the student whose record is to be searched: ");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.search(num, ref prev, ref curr) == false)
+                                    Console.WriteLine("\nRecord not found");
+                                else
+                                {
+                                    Console.WriteLine("\nRecord found");
+                                    Console.WriteLine("\nRoll number: " + curr.rollNumber);
+                                    Console.WriteLine("\nName: " + curr.name);
+                                }
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.firstNode();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("invalid option");
+                                break;
+                            }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
             }
         }
     }
