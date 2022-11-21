@@ -46,7 +46,8 @@ namespace Exercise_Linked_List_D
         public void traverse()
         /*Traverses all the nodes of the list*/
         {
-            
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
 
         }
     }
