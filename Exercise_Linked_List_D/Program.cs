@@ -36,6 +36,13 @@ namespace Exercise_Linked_List_D
                 return(false);
             /*returns false if the node is not found*/
         }
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true ;
+            else
+                return false ;
+        }
     }
     internal class Program
     {
